@@ -19,24 +19,25 @@
 
 <body class="">
   <main class="min-h-screen bg-[url('images/background.png')] bg-no-repeat bg-center">
-    <section class="enter flex justify-center items-center flex-col min-h-screen border hidden">
+    <section id="home" class="enter flex justify-center items-center flex-col min-h-screen hidden">
       <h1 class="text-white text-[170px] font-normal font-['Anton']">ALPHABET CLASH</h2>
-        <p class="text-white text-2xl font-medium font-['Poppins'] leading-[28.80px]">Unleash Your Keyboard Kung Fu :
+        <p class="text-white text-2xl font-medium font-['Poppins']">Unleash Your Keyboard Kung Fu :
           Press “Enter” to Play</p>
         <div
           class="w-[175px] h-[73px] px-8 py-[22px] bg-white rounded-lg justify-center items-center gap-2.5 inline-flex mt-14">
-          <div class="text-gray-950 text-2xl font-semibold font-['Poppins'] leading-[28.80px]">Play Now</div>
+          <button onclick="showRemove('home', 'play-ground')"
+            class="text-gray-950 text-2xl font-semibold font-['Poppins'] leading-[28.80px]">Play Now</button>
         </div>
     </section>
 
-    <section class="play-ground flex flex-col p-[135px] justify-center items-center borde gap-[50px] hidden">
+    <section id="play-ground" class="play-ground flex flex-col p-[135px] justify-center items-center borde gap-[50px]">
       <!-- mobile-screen -->
       <div
         class="artboard artboard-horizontal phone-6 bg-white bg-opacity-70 rounded-2xl border-8 border-gray-950 border-opacity-80 backdrop-blur-[20px] flex flex-col justify-start items-center">
         <p
           class="text-center text-lg font-medium font-['Poppins'] leading-snug w-[396px] h-10 bg-slate-800 rounded-bl-xl rounded-br-xl">
           Don't watch keyboard while playing...</p>
-        <h1 class="text-gray-950 text-9xl font-semibold font-['Poppins'] text-center my-auto">Y</h1>
+        <h1 id="random-letter" class="text-gray-950 text-9xl font-semibold font-['Poppins'] text-center my-auto">Y</h1>
       </div>
       <!-- keyboard -->
       <div class="key-board">
@@ -92,20 +93,21 @@
       </div>
     </section>
 
-    <section class="score min-h-screen flex justify-center items-center">
+    <section id="final-score" class="score min-h-screen flex justify-center items-center hidden">
       <div
         class="w-[396px] h-[282px] rounded-2xl border border-white border-opacity-20 flex flex-col items-center justify-center gap-4">
         <div><span class="text-white text-[64px] font-extrabold font-['Poppins']">Score</span><span
             class="text-white text-[64px] font-semibold font-['Poppins']"> : </span><span
             class="text-white text-[64px] font-medium font-['Poppins']">14</span></div>
-        <button
-          class="w-[175px] h-[61px] px-8 py-4 bg-white rounded-lg justify-center items-center gap-2.5 inline-flex">
-          <div class="text-gray-950 text-2xl font-semibold font-['Poppins'] leading-[28.80px]">Play Now</div>
+        <button class="px-8 py-4 bg-white rounded-lg justify-center items-center gap-2.5 inline-flex">
+          <div class="text-gray-950 text-2xl font-semibold font-['Poppins'] leading-[28.80px]">Play Again</div>
         </button>
-        <div class="text-white text-xl font-medium font-['Poppins'] leading-normal">Practice will make you Pro</div>
+        <div class="text-white text-xl font-medium font-['Poppins'] leading-normal">Practice will makes you a Pro</div>
       </div>
     </section>
   </main>
+  <script src="scripts/utility.js"></script>
+  <script src="scripts/script1.js"></script>
 </body>
 
 </html>
